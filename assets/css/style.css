@@ -175,3 +175,7 @@ footer {
 .social-links li a i:hover {
     color: #e84610;
 }
+
+#footer-details {
+    padding: 20px;
+}
