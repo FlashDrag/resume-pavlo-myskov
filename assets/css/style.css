@@ -215,3 +215,10 @@ footer {
 .three-reasons-heading {
     margin-bottom: 15px;
 }
+
+/* remove white space between first and third reason */
+@media (min-width: 576px) and (max-width: 767px), (min-width: 992px) {
+    .white-space {
+      max-height: 0;
+    }
+  }
