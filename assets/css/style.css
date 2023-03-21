@@ -153,8 +153,7 @@ header {
 }
 
 .menuitem span {
-    display: block;
-    width: 100%;
+    display: inline-block;
     padding-top: 5px;
     text-align: center;
     text-transform: uppercase;
