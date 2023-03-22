@@ -35,7 +35,9 @@
     <header>
       <!-- no-gutters removes the default 15px padding for the row -->
       <div class="row no-gutters">
-        <a href="index.html" class="col-md-4 logo"></a>
+        <div class="col-md-4 logo-wrapper">
+          <a href="index.html" class="logo"></a>
+        </div>
         <div class="col-md-8">
           <div class="row no-gutters bg-color-name-title">
             <div class="col heading">
@@ -50,23 +52,26 @@
                 <li
                   class="col-6 col-sm-3 ui-menu-color-home list-inline-item menuitem"
                 >
-                  <a href="#" class="hvr-icon-buzz-out"
+                  <a href="index.html" class="hvr-icon-buzz-out"
                     ><i class="fa fa-home hvr-icon" aria-hidden="true"></i
-                    ><span>Home</span></a
+                    ><span class="border-bottom">Home</span></a
                   >
                 </li>
                 <li
                   class="col-6 col-sm-3 ui-menu-color-resume list-inline-item menuitem"
                 >
-                  <a href="#" class="hvr-icon-buzz-out"
-                    ><i class="fa fa-graduation-cap hvr-icon" aria-hidden="true"></i
+                  <a href="resume.html" class="hvr-icon-buzz-out"
+                    ><i
+                      class="fa fa-graduation-cap hvr-icon"
+                      aria-hidden="true"
+                    ></i
                     ><span>Resume</span></a
                   >
                 </li>
                 <li
                   class="col-6 col-sm-3 ui-menu-color-contact list-inline-item menuitem"
                 >
-                  <a href="#" class="hvr-icon-buzz-out"
+                  <a href="contact.html" class="hvr-icon-buzz-out"
                     ><i class="fa fa-comment-o hvr-icon" aria-hidden="true"></i
                     ><span>Contact</span></a
                   >
@@ -86,25 +91,35 @@
       </div>
     </header>
 
-    <section></section>
+    <section class="container-fluid">
+      <div class="row bg-color-contact">
+        <div class="col">
+          <h3 class="contact-heading uppercase text-center">Goa a project in mind?</h3>
+          <h5 class="uppercase text-center">Let's work together</h5>
+        </div>
+      </div>
+    </section>
+
     <footer class="container-fluid">
       <div id="footer-details" class="row">
         <div class="col-sm-4">
           <h5 class="uppercase general-sub">About</h5>
           <p class="inline-block">
             Full Stack Software Developer
-            <br>
-            Python: Django | JS: React
-            <br>
+            <br />
+            Python: Django | JS: Vue.js
+            <br />
             HTML5 | CSS3: Bootstrap
-            <br>
+            <br />
             PostgreSQL | Linux | GIT | Docker | Heroku
           </p>
         </div>
         <div class="col-sm-4">
           <h5 class="uppercase general-sub">Download</h5>
           <p class="inline-block">
-            Need a printable version of my CV? Download it here.
+            Need a printable version of my CV?
+            <br />
+            Download it here.
             <a href="#" target="_blank" class="cv-pdf">
               <i class="fa fa-download" aria-hidden="true"></i>
               <!-- as fontawesome icon is hidden for scr readers, we add span with text for screen readers only -->
@@ -122,7 +137,10 @@
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="https://www.linkedin.com/in/pavlo-myskov/" target="_blank">
+              <a
+                href="https://www.linkedin.com/in/pavlo-myskov/"
+                target="_blank"
+              >
                 <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
                 <span class="sr-only">LinkedIn</span>
               </a>
@@ -131,6 +149,12 @@
               <a href="https://github.com/FlashDrag" target="_blank">
                 <i class="fa fa-github" aria-hidden="true"></i>
                 <span class="sr-only">GitHub</span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://t.me/flashdrag" target="_blank">
+                <i class="fa fa-telegram" aria-hidden="true"></i>
+                <span class="sr-only">Telegram</span>
               </a>
             </li>
           </ul>
