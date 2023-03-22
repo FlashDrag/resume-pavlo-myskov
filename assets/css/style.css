@@ -331,3 +331,21 @@ footer {
     left: -6px;
     border-radius: 12px;
 }
+
+
+/* Contact form */
+
+.contact-heading {
+    font-family: "Exo", sans-serif;
+    font-weight: 300;
+}
+
+.form-control:invalid:focus {
+    border-color: #ffbf00;
+    box-shadow: 0 0 0 0.2rem hsla(45, 100%, 50%, 0.25);
+}
+
+button[type="submit"] {
+    color: #fafafa;
+    background-color: #e84610;
+}
