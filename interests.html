@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -31,6 +31,7 @@
 
     <title>Software Developer Resume - Pavlo Myskov</title>
   </head>
+
   <body>
     <header>
       <!-- no-gutters removes the default 15px padding for the row -->
@@ -50,15 +51,15 @@
               <!-- class that displays the list horizontally -->
               <ul id="nav" class="list-inline menucontainer">
                 <li
-                  class="col-6 col-sm-3 ui-menu-color-home list-inline-item menuitem"
+                  class="col-6 col-sm-2 ui-menu-color-home list-inline-item menuitem"
                 >
                   <a href="index.html" class="hvr-icon-buzz-out"
                     ><i class="fa fa-home hvr-icon" aria-hidden="true"></i
-                    ><span class="border-bottom">Home</span></a
+                    ><span>Home</span></a
                   >
                 </li>
                 <li
-                  class="col-6 col-sm-3 ui-menu-color-resume list-inline-item menuitem"
+                  class="col-6 col-sm-2 ui-menu-color-resume list-inline-item menuitem"
                 >
                   <a href="resume.html" class="hvr-icon-buzz-out"
                     ><i
@@ -69,7 +70,23 @@
                   >
                 </li>
                 <li
-                  class="col-6 col-sm-3 ui-menu-color-github list-inline-item menuitem"
+                  class="col-6 col-sm-2 ui-menu-color-contact list-inline-item menuitem"
+                >
+                  <a href="contact.html" class="hvr-icon-buzz-out"
+                    ><i class="fa fa-comment-o hvr-icon" aria-hidden="true"></i
+                    ><span>Contact</span></a
+                  >
+                </li>
+                <li
+                  class="col-6 col-sm-2 ui-menu-color-interests list-inline-item menuitem"
+                >
+                  <a href="interests.html" class="hvr-icon-buzz-out"
+                    ><i class="fa fa-users hvr-icon" aria-hidden="true"></i
+                    ><span class="border-bottom">Interests</span></a
+                  >
+                </li>
+                <li
+                  class="col-6 col-sm-2 ui-menu-color-github list-inline-item menuitem"
                 >
                   <a href="github.html" class="hvr-icon-buzz-out"
                     ><i class="fa fa-github hvr-icon" aria-hidden="true"></i
@@ -77,11 +94,14 @@
                   >
                 </li>
                 <li
-                  class="col-6 col-sm-3 ui-menu-color-contact list-inline-item menuitem"
+                  class="col-6 col-sm-2 ui-menu-color-download list-inline-item menuitem"
                 >
-                  <a href="contact.html" class="hvr-icon-buzz-out"
-                    ><i class="fa fa-comment-o hvr-icon" aria-hidden="true"></i
-                    ><span>Contact</span></a
+                  <a
+                    href="assets/cv/cv.pdf"
+                    target="_blank"
+                    class="hvr-icon-buzz-out"
+                    ><i class="fa fa-download hvr-icon" aria-hidden="true"></i
+                    ><span>Download CV</span></a
                   >
                 </li>
               </ul>
@@ -93,104 +113,95 @@
 
     <section class="container-fluid">
       <div class="row">
-        <div class="col-md-4 bg-color-personal-info section-column">
+        <div class="col-md-4 bg-color-conferences section-column">
           <div class="row">
             <div class="col-12">
-              <h3 class="section-heading uppercase">Personal info</h3>
+              <h3 class="section-heading uppercase">
+                Conferences And Meetups Attended
+              </h3>
             </div>
           </div>
-          <div class="pesonal-info-item">
-            <div class="key">
-              <p class="uppercase">Name:</p>
-            </div>
-            <div class="value">
-              <p>Pavlo Myskov</p>
-            </div>
-          </div>
-          <div class="pesonal-info-item">
-            <div class="key">
-              <p class="uppercase">Address:</p>
-            </div>
-            <div class="value">
-              <p>co. Offaly, Ireland</p>
-            </div>
-          </div>
-          <div class="pesonal-info-item">
-            <div class="key">
-              <p class="uppercase">Telegram:</p>
-            </div>
-            <div class="value">
-              <p>@FlashDrag</p>
-            </div>
-          </div>
+          <div id="map"></div>
         </div>
-        <div class="col-md-8 bg-color-three-reasons section-column">
+        <div class="col-md-8 bg-color-groups">
           <div class="row">
             <div class="col">
-              <h3 class="section-heading uppercase">About Me</h3>
+              <h3 class="section-heading uppercase">My Groups And Societies</h3>
             </div>
           </div>
           <div class="row">
-            <div class="col-11 col-sm-6 col-md-11 col-lg-6">
+            <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
               <div class="row">
                 <div class="col-2">
                   <i
-                    class="three-reasons-icon fa fa-info-circle"
+                    class="three-reasons-icon fa fa-users"
                     aria-hidden="true"
                   ></i>
                 </div>
                 <div class="col-10">
-                  <h4 class="three-reasons-heading uppercase">What do I do?</h4>
+                  <h4 class="three-reasons-heading uppercase">Lorem ipsum</h4>
                   <p>
-                    I'm a software developer with a strong background in Python
-                    and JavaScript. I prioritize creating high-quality,
-                    user-friendly, and maintainable applications.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Reprehenderit quidem debitis laudantium autem eaque, nisi
+                    non. Similique ad itaque omnis, nisi quis neque eum nesciunt
+                    iste architecto in, eaque quas!
                   </p>
                 </div>
               </div>
             </div>
-            <div class="col-11 col-sm-6 col-md-11 col-lg-6 white-space">
+            <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
               <div class="row">
                 <div class="col-2">
                   <i
-                    class="three-reasons-icon fa fa-gear"
+                    class="three-reasons-icon fa fa-users"
                     aria-hidden="true"
                   ></i>
                 </div>
                 <div class="col-10">
-                  <h4 class="three-reasons-heading uppercase">
-                    How do I do it?
-                  </h4>
+                  <h4 class="three-reasons-heading uppercase">Lorem ipsum</h4>
                   <p>
-                    I use the latest technologies and development approaches,
-                    including Agile methodologies, Django Python framework for
-                    robust and scalable back-end systems and APIs, Vue JS
-                    library for high-quality front-end interfaces, and Bootstrap
-                    CSS framework for modern and responsive mobile-first web
-                    applications. I am also experienced in using SQL database
-                    management systems and Docker for containerization to deploy
-                    applications consistently and reliably across multiple
-                    environments.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                    dolorem, delectus officia ab sequi sint quo minus porro
+                    accusamus repellendus consequuntur ipsum quisquam non
+                    laboriosam sunt nisi reprehenderit dolorum beatae!
                   </p>
                 </div>
               </div>
             </div>
-            <div class="col-11 col-sm-6 col-md-11 col-lg-6">
+            <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
               <div class="row">
                 <div class="col-2">
                   <i
-                    class="three-reasons-icon fa fa-bolt"
+                    class="three-reasons-icon fa fa-users"
                     aria-hidden="true"
                   ></i>
                 </div>
                 <div class="col-10">
-                  <h4 class="three-reasons-heading uppercase">Why hire me?</h4>
+                  <h4 class="three-reasons-heading uppercase">Lorem ipsum</h4>
                   <p>
-                    I am a fast learner and a highly motivated individual who is
-                    eager to grow professionally and become a valuable asset in
-                    the field of software/web development. I pay attention to
-                    detail and have a commitment to delivering reliable,
-                    user-friendly, and maintainable applications.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Odit, rem laborum. Et tenetur rem harum, repellendus earum
+                    consequuntur quas dicta beatae ipsum, aliquid temporibus
+                    numquam laboriosam commodi nostrum iste totam.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
+              <div class="row">
+                <div class="col-2">
+                  <i
+                    class="three-reasons-icon fa fa-users"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <div class="col-10">
+                  <h4 class="three-reasons-heading uppercase">Lorem ipsum</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Ab, pariatur dolores quis suscipit ullam asperiores tempore
+                    aliquid, necessitatibus quia error laborum ea! Perspiciatis
+                    sint laudantium alias doloribus sapiente eaque voluptatibus.
                   </p>
                 </div>
               </div>
@@ -266,5 +277,12 @@
       src="https://kit.fontawesome.com/b4aef698f5.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDHHyac2SiOYPNYxXMK7rqJjnB8nCaaxE&callback=initMap"
+    ></script>
+    <script src="assets/js/maps.js"></script>
   </body>
 </html>

@@ -31,6 +31,7 @@
 
     <title>Software Developer Resume - Pavlo Myskov</title>
   </head>
+
   <body>
     <header>
       <!-- no-gutters removes the default 15px padding for the row -->
@@ -54,7 +55,7 @@
                 >
                   <a href="index.html" class="hvr-icon-buzz-out"
                     ><i class="fa fa-home hvr-icon" aria-hidden="true"></i
-                    ><span class="border-bottom">Home</span></a
+                    ><span>Home</span></a
                   >
                 </li>
                 <li
@@ -73,7 +74,7 @@
                 >
                   <a href="github.html" class="hvr-icon-buzz-out"
                     ><i class="fa fa-github hvr-icon" aria-hidden="true"></i
-                    ><span>GitHub</span></a
+                    ><span class="border-bottom">GitHub</span></a
                   >
                 </li>
                 <li
@@ -92,114 +93,28 @@
     </header>
 
     <section class="container-fluid">
-      <div class="row">
-        <div class="col-md-4 bg-color-personal-info section-column">
-          <div class="row">
-            <div class="col-12">
-              <h3 class="section-heading uppercase">Personal info</h3>
-            </div>
-          </div>
-          <div class="pesonal-info-item">
-            <div class="key">
-              <p class="uppercase">Name:</p>
-            </div>
-            <div class="value">
-              <p>Pavlo Myskov</p>
-            </div>
-          </div>
-          <div class="pesonal-info-item">
-            <div class="key">
-              <p class="uppercase">Address:</p>
-            </div>
-            <div class="value">
-              <p>co. Offaly, Ireland</p>
-            </div>
-          </div>
-          <div class="pesonal-info-item">
-            <div class="key">
-              <p class="uppercase">Telegram:</p>
-            </div>
-            <div class="value">
-              <p>@FlashDrag</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-8 bg-color-three-reasons section-column">
-          <div class="row">
-            <div class="col">
-              <h3 class="section-heading uppercase">About Me</h3>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-11 col-sm-6 col-md-11 col-lg-6">
-              <div class="row">
-                <div class="col-2">
-                  <i
-                    class="three-reasons-icon fa fa-info-circle"
-                    aria-hidden="true"
-                  ></i>
-                </div>
-                <div class="col-10">
-                  <h4 class="three-reasons-heading uppercase">What do I do?</h4>
-                  <p>
-                    I'm a software developer with a strong background in Python
-                    and JavaScript. I prioritize creating high-quality,
-                    user-friendly, and maintainable applications.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-11 col-sm-6 col-md-11 col-lg-6 white-space">
-              <div class="row">
-                <div class="col-2">
-                  <i
-                    class="three-reasons-icon fa fa-gear"
-                    aria-hidden="true"
-                  ></i>
-                </div>
-                <div class="col-10">
-                  <h4 class="three-reasons-heading uppercase">
-                    How do I do it?
-                  </h4>
-                  <p>
-                    I use the latest technologies and development approaches,
-                    including Agile methodologies, Django Python framework for
-                    robust and scalable back-end systems and APIs, Vue JS
-                    library for high-quality front-end interfaces, and Bootstrap
-                    CSS framework for modern and responsive mobile-first web
-                    applications. I am also experienced in using SQL database
-                    management systems and Docker for containerization to deploy
-                    applications consistently and reliably across multiple
-                    environments.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-11 col-sm-6 col-md-11 col-lg-6">
-              <div class="row">
-                <div class="col-2">
-                  <i
-                    class="three-reasons-icon fa fa-bolt"
-                    aria-hidden="true"
-                  ></i>
-                </div>
-                <div class="col-10">
-                  <h4 class="three-reasons-heading uppercase">Why hire me?</h4>
-                  <p>
-                    I am a fast learner and a highly motivated individual who is
-                    eager to grow professionally and become a valuable asset in
-                    the field of software/web development. I pay attention to
-                    detail and have a commitment to delivering reliable,
-                    user-friendly, and maintainable applications.
-                  </p>
-                </div>
-              </div>
-            </div>
+      <div class="row bg-color-contact">
+        <div class="col">
+          <h3 class="contact-heading uppercase text-center">
+            View My GitHub Projects
+          </h3>
+          <h5 class="uppercase text-center">
+            You can also search on other user profiles
+          </h5>
+
+          <div class="center-form">
+            <input
+              type="text"
+              id="gh-username"
+              value="octocat"
+              oninput="fetchGitHubInformation()"
+            />
+            <div id="gh-user-data"></div>
+            <div id="gh-repo-data"></div>
           </div>
         </div>
       </div>
     </section>
-
     <footer class="container-fluid">
       <div id="footer-details" class="row">
         <div class="col-sm-4">
@@ -265,6 +180,15 @@
     <script
       src="https://kit.fontawesome.com/b4aef698f5.js"
       crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.js"
+      integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="assets/js/github-information.js"
     ></script>
   </body>
 </html>
