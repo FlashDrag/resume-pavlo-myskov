@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Full Stack Software Developer Resume of Pavlo Myskov."
+    />
+    <meta
+      keywords="Pavlo Myskov, Full Stack Software Developer,
+       Software Developer, Web Developer, Front End Developer,
+       Back End Developer, Full Stack Developer, JavaScript Developer, Python Developer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
+      integrity="sha512-csw0Ma4oXCAgd/d4nTcpoEoz4nYvvnk21a8VA2h2dzhPAvjbUIK6V3si7/g/HehwdunqqW18RwCJKpD7rL67Xg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+    <title>Software Developer Resume - Pavlo Myskov</title>
+</head>
+
+<body>
+    <header>
+        <!-- no-gutters removes the default 15px padding for the row -->
+        <div class="row no-gutters">
+          <div class="col-md-4 logo-wrapper">
+            <a href="index.html" class="logo"></a>
+          </div>
+          <div class="col-md-8">
+            <div class="row no-gutters bg-color-name-title">
+              <div class="col heading">
+                <h1 class="name">Pavlo Myskov</h1>
+                <h2 class="title">Full Stack Software Developer</h2>
+              </div>
+            </div>
+            <div class="row no-gutters">
+              <div class="col">
+                <!-- class that displays the list horizontally -->
+                <ul id="nav" class="list-inline menucontainer">
+                  <li
+                    class="col-6 col-sm-2 ui-menu-color-home list-inline-item menuitem"
+                  >
+                    <a href="index.html" class="hvr-icon-buzz-out"
+                      ><i class="fa fa-home hvr-icon" aria-hidden="true"></i
+                      ><span>Home</span></a
+                    >
+                  </li>
+                  <li
+                    class="col-6 col-sm-2 ui-menu-color-resume list-inline-item menuitem"
+                  >
+                    <a href="resume.html" class="hvr-icon-buzz-out"
+                      ><i
+                        class="fa fa-graduation-cap hvr-icon"
+                        aria-hidden="true"
+                      ></i
+                      ><span>Resume</span></a
+                    >
+                  </li>
+                  <li
+                    class="col-6 col-sm-2 ui-menu-color-contact list-inline-item menuitem"
+                  >
+                    <a href="contact.html" class="hvr-icon-buzz-out"
+                      ><i class="fa fa-comment-o hvr-icon" aria-hidden="true"></i
+                      ><span>Contact</span></a
+                    >
+                  </li>
+                  <li
+                    class="col-6 col-sm-2 ui-menu-color-interests list-inline-item menuitem"
+                  >
+                    <a href="interests.html" class="hvr-icon-buzz-out"
+                      ><i class="fa fa-users hvr-icon" aria-hidden="true"></i
+                      ><span>Interests</span></a
+                    >
+                  </li>
+                  <li
+                    class="col-6 col-sm-2 ui-menu-color-github list-inline-item menuitem"
+                  >
+                    <a href="github.html" class="hvr-icon-buzz-out"
+                      ><i class="fa fa-github hvr-icon" aria-hidden="true"></i
+                      ><span class="border-bottom">GitHub</span></a
+                    >
+                  </li>
+                  <li
+                    class="col-6 col-sm-2 ui-menu-color-download list-inline-item menuitem"
+                  >
+                    <a href="assets/cv/cv.pdf" target="_blank" class="hvr-icon-buzz-out"
+                      ><i class="fa fa-download hvr-icon" aria-hidden="true"></i
+                      ><span>Download CV</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    </header>
+
+    <section class="container-fluid">
+        <div class="row bg-color-contact">
+            <div class="col">
+                <h3 class="contact-heading uppercase text-center">View My GitHub Projects</h3>
+                <h5 class="uppercase text-center">You can also search on other user profiles</h5>
+
+                <div class="center-form">
+                    <input type="text" id="gh-username" value="octocat" oninput="fetchGitHubInformation()" />
+                    <div id="gh-user-data"></div>
+                    <div id="gh-repo-data"></div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <footer class="container-fluid">
+        <div id="footer-details" class="row">
+          <div class="col-sm-4">
+            <h5 class="uppercase general-sub">About</h5>
+            <p class="inline-block">
+              Full Stack Software Developer
+              <br />
+              Python: Django | JS: Vue.js, jQuery
+              <br />
+              HTML5 | CSS3: Bootstrap
+              <br />
+              PostgreSQL | Linux | GIT | Docker | Heroku
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <h5 class="uppercase general-sub">Download</h5>
+            <p class="inline-block">
+              Need a printable version of my CV?
+              <br />
+              Download it here.
+              <a href="assets/cv/cv.pdf" target="_blank" class="cv-pdf">
+                <i class="fa fa-download" aria-hidden="true"></i>
+                <!-- as fontawesome icon is hidden for scr readers, we add span with text for screen readers only -->
+                <span class="sr-only">Download link</span>
+              </a>
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <h5 class="uppercase general-sub">Social</h5>
+            <ul class="list-inline social-links">
+              <li class="list-inline-item">
+                <a href="https://www.facebook.com/pavlomyskov" target="_blank">
+                  <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                  <span class="sr-only">Facebook</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="https://www.linkedin.com/in/pavlo-myskov/"
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                  <span class="sr-only">LinkedIn</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://github.com/FlashDrag" target="_blank">
+                  <i class="fa fa-github" aria-hidden="true"></i>
+                  <span class="sr-only">GitHub</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://t.me/flashdrag" target="_blank">
+                  <i class="fa fa-telegram" aria-hidden="true"></i>
+                  <span class="sr-only">Telegram</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/b4aef698f5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/github-information.js"></script>
+</body>
+
+</html>

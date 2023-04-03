@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Exo:100,200,300,400,500,600,700');
 
+body {
+    font-weight: 400;
+}
+
 /* Colours */
 
 .bg-color-name-title {
@@ -36,7 +40,16 @@
 }
 
 .ui-menu-color-download {
-    background-color: #525252;
+    background-color: #d9a81d;
+}
+
+
+.ui-menu-color-github {
+    background-color: #1c4a6c;
+}
+
+.ui-menu-color-interests {
+    background-color: #e74c3c;
 }
 
 
