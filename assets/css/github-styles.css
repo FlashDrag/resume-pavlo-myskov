@@ -5,7 +5,9 @@ br {
   line-height: 1.6em;
 }
 
-
+#github {
+  min-height: 15rem;
+}
 
 ol,
 ul {
