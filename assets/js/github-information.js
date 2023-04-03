@@ -1,3 +1,5 @@
+const favoriteRepos = ["word-wheel", "library-management-system", "barber-shop", "DateCalcBot", "study-projects"]
+
 function userInformationHTML(user) {
   return `
       <h2>${user.name}
@@ -15,16 +17,21 @@ function userInformationHTML(user) {
       </div>`;
 }
 
-function repoInformationHTML(repos) {
+function repoInformationHTML(user, repos) {
   if (repos.length == 0) {
-      return `<div class="clearfix repo-list">No repos!</div>`;
+    return `<div class="clearfix repo-list">No repos!</div>`;
   }
 
-  var listItemsHTML = repos.map(function(repo) {
+  let listItemsHTML;
+  if (user.login === "FlashDrag") {
+    listItemsHTML = hightlightFavoriteRepos(repos);
+  } else {
+    listItemsHTML = repos.map(function (repo) {
       return `<li>
                   <a href="${repo.html_url}" target="_blank">${repo.name}</a>
               </li>`;
-  });
+    });
+  }
 
   return `<div class="clearfix repo-list">
               <p>
@@ -34,6 +41,20 @@ function repoInformationHTML(repos) {
                   ${listItemsHTML.join("\n")}
               </ul>
           </div>`;
+}
+
+function hightlightFavoriteRepos(repos) {
+  let listItemsHTML = repos.map(function (repo) {
+    let listItem;
+    if (favoriteRepos.includes(repo.name)) {
+      listItem = `<li><a class="repo-highlight" href="${repo.html_url}" target="_blank">${repo.name}</a></li>`
+    } else {
+      listItem = `<li><a href="${repo.html_url}" target="_blank">${repo.name}</a></li>`
+    }
+    return listItem;
+  });
+
+  return listItemsHTML;
 }
 
 function fetchGitHubInformation(e) {
@@ -62,12 +83,12 @@ function fetchGitHubInformation(e) {
       let userData = firstResponse[0];
       let repoData = secondResponse[0];
       $("#gh-user-data").html(userInformationHTML(userData));
-      $("#gh-repo-data").html(repoInformationHTML(repoData));
+      $("#gh-repo-data").html(repoInformationHTML(userData, repoData));
     }, function (errorResponse) {
       if (errorResponse.status === 404) {
         $("#gh-user-data").html(`<h2>No info found for user ${username}</h2>`);
       } else if (errorResponse.status === 403) {
-        let resetTime = new Date(errorResponse.getResponseHeader("X-RateLimit-Reset")*1000);
+        let resetTime = new Date(errorResponse.getResponseHeader("X-RateLimit-Reset") * 1000);
         $("#gh-user-data").html(`<h4>Too many requests, please wait until ${resetTime.toLocaleTimeString()}</h4>`)
       } else {
         $("#gh-user-data").html(
