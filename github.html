@@ -102,19 +102,21 @@
             You can also search on other user profiles
           </h5>
 
-          <div class="center-form">
-            <input
-              type="text"
-              id="gh-username"
-              value="octocat"
-              oninput="fetchGitHubInformation()"
-            />
+          <div class="col-sm-10 col-md-8 col-xl-6 pt-2 pb-md-2 pt-md-3 my-0 mx-auto">
+              <input
+                class="mb-2"
+                type="text"
+                id="gh-username"
+                value="octocat"
+                oninput="fetchGitHubInformation()"
+              />
             <div id="gh-user-data"></div>
             <div id="gh-repo-data"></div>
           </div>
         </div>
       </div>
     </section>
+
     <footer class="container-fluid">
       <div id="footer-details" class="row">
         <div class="col-sm-4">
