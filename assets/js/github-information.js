@@ -57,7 +57,7 @@ function hightlightFavoriteRepos(repos) {
   return listItemsHTML;
 }
 
-function fetchGitHubInformation(e) {
+function fetchGitHubInformation() {
   $("#gh-user-data").html("");
   $("#gh-repo-data").html("");
 
@@ -96,5 +96,37 @@ function fetchGitHubInformation(e) {
       }
     });
 }
+
+/**
+ * Creates a debounced version of the given function.
+ * The debounced function will delay the invoking of the original function
+ * until after the specified wait time has passed since the last time it was called.
+ *
+ * @param {Function} func - The function to debounce.
+ * @param {number} wait - The number of milliseconds to delay before invoking the function.
+ * @returns {Function} - A debounced version of the given function.
+ *
+ * @example
+ * const debouncedFunc = debounce(function() { console.log('Debounced!'); }, 300);
+ * window.addEventListener('resize', debouncedFunc);
+ */
+function debounce(func, wait) {
+  let timeout;
+
+  return function(...args) {
+    const context = this;
+
+    // Clear any existing timeout to prevent the previous function call from executing
+    clearTimeout(timeout);
+
+    // Set a new timeout to delay the execution of the original function
+    timeout = setTimeout(() => {
+      // Call the original function with the saved context ('this') and arguments
+      func.apply(context, args)
+    }, wait);
+  };
+}
+
+const throttledOnInput = debounce(fetchGitHubInformation, 800);
 
 $(document).ready(fetchGitHubInformation);
