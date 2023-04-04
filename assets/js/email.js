@@ -1,21 +1,38 @@
-(function () {
-  emailjs.init("");
-})();
+contactForm.addEventListener('submit', (event) => {
+  event.preventDefault();
 
-function sendMail(contactForm) {
-  let templateParams = {
-    from_name: contactForm.name.value,
-    from_email: contactForm.email.value,
-    message: contactForm.projectsummary.value,
-  }
+  let form = new FormData(event.target)
+  postForm(form);
+})
 
-  emailjs.send("gmail_service", "template_project_request", templateParams)
-    .then(function (response) {
-      console.log('SUCCESS!', response.status, response.text);
-    }, function (error) {
-      console.log('FAILED...', error);
+async function postForm(form) {
+  try {
+    const response = await fetch('/.netlify/functions/sendEmail', {
+      method: "POST",
+      // convert FormData object to a JSON object
+      body: JSON.stringify(Object.fromEntries(form)),
     });
 
-  return false;
-}
+    const data = await response.json();
 
+    if (response.ok) {
+      // Handle the server response if successful (status code 200)
+      alert('Email sent successfully');
+      // TODO: SHOW CLEAR MODAL WITH THANK YOU AND SMILE
+      // $('#result-modal').modal('show')
+      console.dir(`Status: ${data.status}, Text: ${data.text}`);
+      window.location.replace("index.html");
+    } else {
+      // Handle api errors
+      alert('Email sending failed');
+      // TODO: SHOW CLEAR MODAL WITH FAILED AND BAD SMILE
+      // $('#result-modal').modal('show')
+      console.error(`Status: ${response.status}, Error: ${data}`)
+      window.location.replace("index.html");
+    }
+  } catch (err) {
+    // Handle network errors
+    console.error(err);
+    alert('Network error. Please try again later.');
+  }
+}

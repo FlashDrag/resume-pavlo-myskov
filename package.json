@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "@emailjs/nodejs": "^2.1.1",
+    "dotenv": "^16.0.3"
+  },
+  "scripts": {
+    "build": "npm run-script",
+    "dev": "netlify dev"
+  },
+  "name": "resume-pavlo-myskov",
+  "description": "This is a HTML/CSS static website based on the Bootstrap CSS framework to style and layout the content. The website provides a resume of a developer proffesional experience and skills. The resume website is developed based on the Mobile First approach and it is fully responsive, so it can be viewed on any device.",
+  "version": "1.0.0",
+  "main": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlashDrag/resume-pavlo-myskov.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FlashDrag/resume-pavlo-myskov/issues"
+  },
+  "homepage": "https://github.com/FlashDrag/resume-pavlo-myskov#readme"
+}

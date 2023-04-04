@@ -2,7 +2,7 @@
 This is a HTML/CSS static website based on the Bootstrap CSS framework to style and layout the content.
 The website provides a resume of a developer proffesional experience and skills. The resume website is developed based on the Mobile First approach and it is fully responsive, so it can be viewed on any device.
 
-[View the live project here.](https://flashdrag.github.io/resume-pavlo-myskov/)
+[View the live project here](https://resume-pavlo-myskov.netlify.app)
 
 ## Structure
 
@@ -49,12 +49,40 @@ The project is built using the following technologies:
 - Font Awesome
 - Google Fonts
 - GitHub API
-- EmailJS
+- [EmailJS](https://www.emailjs.com/)
+- [Netlify serverless function](https://www.netlify.com/blog/intro-to-serverless-functions/)
 
 ## Deployment
-The website is deployed on GitHub Pages and it is available at the following link:
+The RESUME is a static web service that deployed on Netlify from GitHub repository.
 
-https://flashdrag.github.io/resume-pavlo-myskov/
+It is available at the following link:
+
+https://resume-pavlo-myskov.netlify.app
+
+## EmailJS and Netlify Serverless Function
+The EMAILJS service is used to send the message from the contact form to the developer email address.
+### With Netlify serverless function
+[Official EmailJS SDK for Node.js](https://www.npmjs.com/package/@emailjs/nodejs)
+
+The Netlify serverless function is used to hide the API keys from the public repository.
+To use the EmailJS SDK with the Netlify serverless function you need to install the EmailJS SDK using:
+```npm install @emailjs/nodejs```
+
+### EmailJS SDK for Browsers
+[Official EmailJS SDK for Browsers](https://www.npmjs.com/package/@emailjs/browser)
+To use EmailJS SDK without the Netlify serverless function you need to add the following code to the body of the contact.html file:
+
+```
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("YOUR_PUBLIC_KEY");
+   })();
+</script>
+```
+[See the simple implementation of the email sender](https://github.com/FlashDrag/resume-pavlo-myskov/tree/8d7926d7773d069e74706caa6963e0686bee8152)
 
 ## Credits
 Website created using the [Code institute](https://codeinstitute.net/) walkthrough from the [Diploma in Full Stack
