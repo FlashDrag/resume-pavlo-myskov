@@ -99,10 +99,8 @@
           </h3>
           <h5 class="uppercase text-center">Let's work together</h5>
           <div class="form-row">
-            <div
-              class="col-10 col-md-8 col-lg-6 pt-2 pt-md-3 my-0 mx-auto"
-            >
-              <form>
+            <div class="col-10 col-md-8 col-lg-6 pt-2 pt-md-3 my-0 mx-auto">
+              <form onsubmit="return sendMail(this);">
                 <input
                   type="text"
                   name="name"
@@ -124,6 +122,7 @@
                   id="projectsummary"
                   rows="5"
                   minlength="20"
+                  maxlength="800"
                   class="form-control"
                   placeholder="Project description"
                   required
@@ -207,6 +206,14 @@
     <script
       src="https://kit.fontawesome.com/b4aef698f5.js"
       crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="assets/js/email.js"
     ></script>
   </body>
 </html>

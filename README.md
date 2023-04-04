@@ -35,7 +35,7 @@ Skills column contains two lists of skills: _Front End_ and _Back End_. Under th
 The GitHub page contains a list of the developer repositories with the links. Also the user can search for other user profiles and see their repositories.
 
 - ### Contact page
-The contact page designed to allow users to easily get in touch with the site owners or developers. It includes a form where users can input their name, email, and a brief description of their project.
+The contact page designed to allow users to easily get in touch with the site owners or developers. It includes a form where users can input their name, email, and a brief description of their project. It uses EmailJS to send the message to the developer email address.
 
 ## Technologies Used
 The project is built using the following technologies:
@@ -49,6 +49,7 @@ The project is built using the following technologies:
 - Font Awesome
 - Google Fonts
 - GitHub API
+- EmailJS
 
 ## Deployment
 The website is deployed on GitHub Pages and it is available at the following link:
