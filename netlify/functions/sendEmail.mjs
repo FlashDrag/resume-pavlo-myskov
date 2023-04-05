@@ -14,10 +14,10 @@ export const handler = async (event, context) => {
   };
 
   try {
-    const response = await send("gmail_service", "template_project_request", templateParams);
+    await send("gmail_service", "template_project_request", templateParams);
     return {
       statusCode: 200,
-      body: JSON.stringify(response),
+      body: JSON.stringify("ok"),
     };
   } catch (error) {
     if (error instanceof EmailJSResponseStatus) {

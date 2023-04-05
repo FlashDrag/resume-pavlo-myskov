@@ -113,7 +113,7 @@
           <h5 class="uppercase text-center">Let's work together</h5>
           <div class="form-row">
             <div class="col-10 col-md-8 col-lg-6 pt-2 pt-md-3 my-0 mx-auto">
-              <form id="contactForm">
+              <form action="/index.html" id="contactForm">
                 <input
                   type="text"
                   name="name"
@@ -215,6 +215,35 @@
         </div>
       </div>
     </footer>
+
+    <div
+      class="modal fade"
+      id="resultModal"
+      data-backdrop="static"
+      data-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="resultModalLabel"
+      aria-hidden="true"
+      role="dialog"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content card">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="card-img">
+            <img id="modal-img" class="img-fluid" src="" />
+          </div>
+          <div class="card-title">
+            <p></p>
+          </div>
+          <div class="card-text">
+            <p></p>
+          </div>
+          <a class="btn modal-btn" href="index.html">Back to resume</a>
+        </div>
+      </div>
+    </div>
 
     <script
       src="https://kit.fontawesome.com/b4aef698f5.js"

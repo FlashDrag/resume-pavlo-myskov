@@ -353,3 +353,63 @@ button[type="submit"] {
     color: #fafafa;
     background-color: #e84610;
 }
+
+/* Modal */
+.mt-100{
+    margin-top:100px;
+}
+
+.card {
+    border-radius: 3vh;
+    margin: auto;
+    padding: 7vh 6vh;
+    align-items: center;
+    box-shadow: 0 2px 20px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card .close {
+    align-self: flex-end;
+}
+
+.card-img{
+    padding: 20px 0;
+    width: 40%;
+}
+
+.card-img img{
+    opacity: 0.7;
+}
+.card-title{
+    margin-bottom: unset;
+}
+.card-title p{
+    font-weight: 900;
+    font-size: 30px;
+    margin-bottom: unset;
+}
+.card-text p{
+    color: grey;
+    font-size: 25px;
+    text-align: center;
+    padding: 3vh 0;
+    font-weight: lighter;
+}
+.modal-btn{
+    width: 100%;
+    border-color: #1de2e2;
+    border-radius: 25px;
+    color: white;
+    font-size: 20px;
+}
+.modal-btn:focus{
+    box-shadow: none;
+    outline: none;
+    box-shadow: none;
+    color: white;
+    -webkit-box-shadow: none;
+    -webkit-user-select: none;
+    transition: none;
+}
+.modal-btn:hover{
+    color: white;
+}
