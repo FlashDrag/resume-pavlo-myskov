@@ -88,3 +88,5 @@ To use EmailJS SDK without the Netlify serverless function you need to add the f
 Website created using the [Code institute](https://codeinstitute.net/) walkthrough from the [Diploma in Full Stack
 Software Development](https://codeinstitute.net/full-stack-software-development-diploma/) course.
 
+Favicon taken from [icons8](https://icons8.com/)
+
