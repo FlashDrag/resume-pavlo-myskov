@@ -1,4 +1,4 @@
-const favoriteRepos = ["word-wheel", "library-management-system", "barber-shop", "DateCalcBot", "study-projects"]
+const favoriteRepos = ["get-job", "word-wheel", "library-management-system", "barber-shop", "DateCalcBot", "study-projects"]
 
 function userInformationHTML(user) {
   return `
