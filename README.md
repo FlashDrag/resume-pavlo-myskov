@@ -1,16 +1,21 @@
 # Software developer resume website
 This is a HTML/CSS static website based on the Bootstrap CSS framework to style and layout the content.
-The website provides a resume of a developer proffesional experience and skills. The resume website is developed based on the Mobile First approach and it is fully responsive, so it can be viewed on any device.
+The website provides a resume of a developer proffesional experience and skills. Also it contains a list of the developer projects with the live demo and the GitHub repository links.
+The resume website is developed based on the Mobile First approach and it is fully responsive, so it can be viewed on any device.
 
 [View the live project here](https://resume-pavlo-myskov.netlify.app)
 
+![Resume mockup](assets/images/mockup-resume.png)
+
 ## Structure
 
-The website is composed of 4 pages:
+The website is composed of 5 pages:
 - `index.html` - the main page
 - `resume.html` - the resume page
+- `projects.html` - the projects page
 - `github.html` - the github page
 - `contact.html` - the contact page
+- `download.html` - the download navbar link
 
 The header and footer are similar on all pages.
 
@@ -31,11 +36,17 @@ The main section of the index page contains the developer personal information a
 The resume page is divided into two columns. The left column contains the developer professional experience and the right column contains the developer skills.
 Skills column contains two lists of skills: _Front End_ and _Back End_. Under the lists there is Botstrap progress bars for some tools and technologies with the percentage of knowledge.
 
+- ### Projects page
+The projects page contains a list of the developer projects with the links to the GitHub repositories and the live demo. Each project has a short description and a list of technologies used.
+
 - ### Github page
 The GitHub page contains a list of the developer repositories with the links. Also the user can search for other user profiles and see their repositories.
 
 - ### Contact page
 The contact page designed to allow users to easily get in touch with the site owners or developers. It includes a form where users can input their name, email, and a brief description of their project. It uses EmailJS to send the message to the developer email address.
+
+- ### Download navbar link
+The download navbar link is available on all pages. It allows the user to download the resume in PDF format.
 
 ## Technologies Used
 The project is built using the following technologies:
